@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(int argc, char* argv[])
+{//lehen bikiak
+    int a, b,c,kont, e,lehena;
+    c = 0;
+    b = 0;
+    kont = 0;
+    for (a = 10; a < 500; a++) {
+
+        lehena = 1;
+        for (e = 2; e < a; e++) {
+            if (a % e == 0) { lehena = 0; }
+        }
+        if (lehena == 1) {
+            b = c;
+            c = a;
+            if (lehena == 1 && kont == 2) { printf("%d %d\n", b, c); }
+            kont = 0;
+        }
+
+        kont++;
+    }
+}
